@@ -1,4 +1,4 @@
-package models;
+package com.example.github_pilot_group.models;
 
 import jakarta.persistence.*;
 import lombok.Data;
@@ -9,10 +9,14 @@ import lombok.Setter;
 @Setter
 @Entity
 @Data
+@Table(name = "students")
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+
+    private long id;
+
     private String name;
-    private Integer age;
+
+    private int age;
 }
